@@ -11,7 +11,7 @@
         }
 
         .navbar {
-            background-color: black;
+            background-color: green;
             padding: 10px;
         }
 
@@ -22,7 +22,7 @@
         }
 
         .navbar a:hover {
-            color: orange;
+            color: black;
         }
 
         .content {
@@ -45,10 +45,17 @@
             background: black;
             color: white;
             border: none;
+            cursor: pointer;
         }
 
         button:hover {
             background: orange;
+        }
+
+        #successMsg {
+            color: green;
+            display: none;
+            margin-top: 10px;
         }
     </style>
 
@@ -64,19 +71,28 @@
     <div class="content">
         <h1>Contact Me</h1>
 
-        <form>
+        <form onsubmit="showMessage(event)">
             <label>Name:</label>
-            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your name" required>
 
             <label>Email:</label>
-            <input type="email" placeholder="Enter your email">
+            <input type="email" placeholder="Enter your email" required>
 
             <label>Message:</label>
-            <textarea placeholder="Write your message"></textarea>
+            <textarea placeholder="Write your message" required></textarea>
 
             <button type="submit">Send</button>
         </form>
+
+        <p id="successMsg">Message sent successfully ✅</p>
     </div>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // stop page refresh
+            document.getElementById("successMsg").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
