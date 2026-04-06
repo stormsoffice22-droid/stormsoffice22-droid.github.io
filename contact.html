@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: orange;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background: black;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background: orange;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="content">
+        <h1>Contact Me</h1>
+
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Message:</label>
+            <textarea placeholder="Write your message"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
