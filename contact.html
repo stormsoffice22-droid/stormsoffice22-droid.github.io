@@ -11,7 +11,7 @@
         }
 
         .navbar {
-            background-color: green;
+            background-color: black;
             padding: 10px;
         }
 
@@ -22,7 +22,7 @@
         }
 
         .navbar a:hover {
-            color: black;
+            color: orange;
         }
 
         .content {
@@ -58,8 +58,8 @@
             margin-top: 10px;
         }
     </style>
-
 </head>
+
 <body>
 
     <div class="navbar">
@@ -71,15 +71,17 @@
     <div class="content">
         <h1>Contact Me</h1>
 
-        <form onsubmit="showMessage(event)">
+        <!-- ✅ YOUR REAL FORMSPREE LINK IS HERE -->
+        <form action="https://formspree.io/f/xreojjvo" method="POST" onsubmit="showMessage()">
+
             <label>Name:</label>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" name="name" required>
 
             <label>Email:</label>
-            <input type="email" placeholder="Enter your email" required>
+            <input type="email" name="email" required>
 
             <label>Message:</label>
-            <textarea placeholder="Write your message" required></textarea>
+            <textarea name="message" required></textarea>
 
             <button type="submit">Send</button>
         </form>
@@ -88,8 +90,7 @@
     </div>
 
     <script>
-        function showMessage(event) {
-            event.preventDefault(); // stop page refresh
+        function showMessage() {
             document.getElementById("successMsg").style.display = "block";
         }
     </script>
