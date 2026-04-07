@@ -27,6 +27,8 @@ nav {
   background: black;
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
@@ -34,6 +36,7 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 nav a:hover {
@@ -44,11 +47,11 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 80px 20px;
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .hero p {
@@ -69,12 +72,12 @@ nav a:hover {
 
 .btn:hover {
   background: #ffcc00;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* SECTION */
 .section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -89,13 +92,15 @@ nav a:hover {
 .card {
   background: #16243f;
   padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-  animation: fadeUp 1s ease;
+  border-radius: 12px;
+  transition: 0.5s;
+  
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
 }
 
 /* ANIMATIONS */
@@ -104,15 +109,11 @@ nav a:hover {
   to {opacity: 1;}
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
 }
 
 </style>
@@ -130,7 +131,7 @@ nav a:hover {
 <!-- HERO -->
 <div class="hero">
   <h1>Hi, I'm Storms 👋</h1>
-  <p>I build simple and clean websites</p>
+  <p>I build simple and clean websites for businesses</p>
   <a href="contact.html" class="btn">Hire Me</a>
 </div>
 
@@ -142,7 +143,7 @@ nav a:hover {
 
     <div class="card">
       <h3>Website Design</h3>
-      <p>I create clean and responsive websites.</p>
+      <p>I create clean, modern and responsive websites.</p>
     </div>
 
     <div class="card">
@@ -166,6 +167,34 @@ nav a:hover {
 
   </div>
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Storms Digital</p>
+</footer>
+
+<!-- JAVASCRIPT (ANIMATION ON SCROLL) -->
+<script>
+
+const cards = document.querySelectorAll('.card');
+
+function showCards() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if (cardTop < triggerBottom) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+}
+
+window.addEventListener('scroll', showCards);
+window.addEventListener('load', showCards);
+
+</script>
 
 </body>
 </html>
