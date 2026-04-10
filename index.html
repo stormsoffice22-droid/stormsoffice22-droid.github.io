@@ -1,116 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Storms Website</title>
+    <title>Storms Digital</title>
+
     <style>
         body {
-            background: linear-gradient(to right, #000000, #1a1a1a);
-            color: white;
-            text-align: center;
-            font-family: Arial;
             margin: 0;
-            padding: 0 20px 0;
+            font-family: Arial;
+            background: linear-gradient(to right, #000000, #0a1a2f);
+            color: white;
         }
 
-        h1 {
+        header {
+            background: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
             color: gold;
-            margin-top: 100px;
         }
 
-        h2 {
-            color: gold;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: gold;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 8px;
-        }
-
-        button:hover {
-            background: #e6c200;
-        }
-
-        a {
+        nav a {
+            margin: 0 10px;
+            color: white;
             text-decoration: none;
         }
 
-        section {
-            margin: 60px auto;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid gold;
-            border-radius: 16px;
-            padding: 30px 20px;
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
         }
 
-        .testimonial {
-            font-style: italic;
-            background: rgba(255, 215, 0, 0.08);
-            border-left: 4px solid gold;
+        .hero h2 {
+            font-size: 30px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background: gold;
+            border: none;
             border-radius: 8px;
-            padding: 12px 16px;
-            margin: 16px 0;
-            text-align: left;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #111;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255,215,0,0.2);
         }
 
         footer {
-            background: #000;
-            border-top: 1px solid gold;
-            color: gold;
             text-align: center;
-            padding: 20px;
-            font-size: 15px;
-            margin-top: 60px;
+            padding: 15px;
+            background: black;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>🔥 Welcome to Storms Website 🔥</h1>
-    <p>This is my upgraded website 😎</p>
+<header>
+    <h1>Storms Digital</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <button onclick="alert('Welcome to my world 🌍🔥')">
-        Click Me
-    </button>
+<div class="hero">
+    <h2>🔥 Hi, I'm Storms 👋</h2>
+    <p>I help businesses get more customers with clean websites</p>
+
+    <button class="btn" onclick="alert('Welcome to my world 🌍🔥')">Click Me</button>
 
     <br>
 
     <a href="https://wa.me/2348085444104" target="_blank">
-        <button>💬 Chat Me on WhatsApp</button>
+        <button class="btn">💬 Chat Me on WhatsApp</button>
     </a>
+</div>
 
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact Me</h2>
+<div class="section" id="services">
+    <h2>My Services</h2>
+
+    <div class="card">
+        <h3>Website Design</h3>
+        <p>I create clean and responsive websites.</p>
+    </div>
+
+    <div class="card">
+        <h3>Contact Forms</h3>
+        <p>I build forms that send messages directly to your email.</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Why Choose Me</h2>
+
+    <div class="card">
+        <h3>Fast Delivery</h3>
+        <p>I deliver your website quickly and efficiently.</p>
+    </div>
+
+    <div class="card">
+        <h3>Mobile Friendly</h3>
+        <p>Your site will look perfect on all phones.</p>
+    </div>
+
+    <div class="card">
+        <h3>Direct Contact</h3>
+        <p>Your customers can reach you easily anytime.</p>
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="card">
         <p>📞 Phone: 08085444104</p>
-        <p>📧 Email: storms.office22@gmail.com</p>
-    </section>
+        <p>📧 Email: stormsoffice22@gmail.com</p>
+    </div>
+</div>
 
-    <!-- Testimonials Section -->
-    <section>
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-            <p>"Storms built my website and my business improved!"</p>
-        </div>
-        <div class="testimonial">
-            <p>"Very fast and professional work."</p>
-        </div>
-    </section>
+<div class="section">
+    <h2>Testimonials</h2>
 
-    <!-- Footer -->
-    <footer>
-        <p>© Storms 2026. All Rights Reserved.</p>
-    </footer>
+    <div class="card">
+        <p>"Storms built my website and my business improved!"</p>
+    </div>
+
+    <div class="card">
+        <p>"Very fast and professional work."</p>
+    </div>
+</div>
+
+<footer>
+    <p>© Storms 2026. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
